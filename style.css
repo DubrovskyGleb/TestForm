@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+	margin: 0;
+	border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(bus.jpg) no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.blur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.popup__body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.popup__content{
+    width: 850px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 0px 8px 8px rgba(117, 117, 117, 0.2);
+}
+
+.popup__content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.popup__content form{
+    background-color: #ffffff;
+    padding: 25px 45px;
+}
+
+.popup__content h2{
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.line{
+    width: 46px;
+    height: 4px;
+    background-color: #2DCC70;
+    border-radius: 2px;
+    margin: 0 auto 9px auto;
+}
+
+.popup__content form input,
+.popup__content form textarea{
+    width: 100%;
+    background-color: #F0F0F0;
+    padding: 10px 17px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    transition: all 0.2s ease 0s;
+}
+
+.popup__content form input:hover,
+.popup__content form textarea:hover{
+    background-color: #E5E5E5;
+}
+
+.popup__content form input{
+    height: 40px;
+}
+
+.popup__content form textarea{
+    resize: vertical;
+    min-height: 150px;
+}
+
+.popup__content form button{
+    width: 100%;
+    height: 40px;
+    background-color: #2DCC70;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+@media(max-width: 950px){
+    .popup{
+        padding: 0 50px;
+    }
+
+    .popup__content{
+        width: 100%;
+    }
+}
+
+@media(max-width: 820px){
+    .popup__content form{
+        padding: 25px;
+    }
+}
+
+@media(max-width: 640px){
+    .popup__content{
+        grid-template-columns: 1fr;
+    }
+    .popup__content > div{
+        display: none;
+    }
+    .popup__content form{
+        padding: 25px 45px;
+    }
+}
+
+@media(max-width: 480px){
+    .popup{
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: 380px){
+    .popup__content form{
+        padding: 25px;
+    }
+}
